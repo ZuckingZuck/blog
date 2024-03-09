@@ -15,7 +15,7 @@ const UserSinglePost = ({ post }) => {
   const handleLike = async () => {
     if (user.user) {
       const response = await fetch(
-        "http://localhost:8080" + "/api/blog/likepost",
+        process.env.REACT_APP_API_URL + "/api/blog/likepost",
         {
           method: "POST",
           headers: {
@@ -38,7 +38,7 @@ const UserSinglePost = ({ post }) => {
   const handleUnlike = async () => {
     if (user.user) {
       const response = await fetch(
-        "http://localhost:8080" + "/api/blog/unlikepost",
+        process.env.REACT_APP_API_URL + "/api/blog/unlikepost",
         {
           method: "POST",
           headers: {

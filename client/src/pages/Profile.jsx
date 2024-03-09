@@ -14,14 +14,14 @@ const Profile = () => {
 
   useEffect(() => {
     const getUserInfo = async () => {
-      const response = await fetch("http://localhost:8080"+`/api/user/${params.nickname}`);
+      const response = await fetch(process.env.REACT_APP_API_URL+`/api/user/${params.nickname}`);
       const json = await response.json();
       if(response.ok){
         setUser(json);
       }
     }
     const getUserBlogs = async () => {
-      const response = await fetch("http://localhost:8080"+`/api/user/getblogs/${params.nickname}`);
+      const response = await fetch(process.env.REACT_APP_API_URL+`/api/user/getblogs/${params.nickname}`);
       const json = await response.json();
       if(response.ok){
         dispatch(getuBlogs(json));

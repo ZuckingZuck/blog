@@ -17,7 +17,7 @@ const AddPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "http://localhost:8080" + "/api/blog/addblog",
+      process.env.REACT_APP_API_URL + "/api/blog/addblog",
       {
         method: "POST",
         headers: {

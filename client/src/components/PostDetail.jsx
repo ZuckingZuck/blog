@@ -11,7 +11,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       const response = await fetch(
-        "http://localhost:8080" + `/api/blog/getsingleblog/${params.pid}`
+        process.env.REACT_APP_API_URL + `/api/blog/getsingleblog/${params.pid}`
       );
       const json = await response.json();
 
