@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body{
+  @apply bg-gray-900 h-full w-full
+}
+
+.logo {
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+.loginbtn {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, rgb(0, 105, 128), rgb(255, 0, 238)) 1;
+}
+
+.addbtn {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, rgb(255, 0, 238), rgb(0, 105, 128)) 1;
+}
+
+.logoutbtn {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, rgb(255, 34, 0), rgb(213, 224, 5)) 1;
+}
+
+.ipss-font{
+  font-family: "Arial", sans-serif !important;
+}
